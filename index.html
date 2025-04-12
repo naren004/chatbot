@@ -2,14 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Gemini Chatbot</title>
+  <title>Hospital Virtual Assistant</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="chat-container">
-    <div id="chat-box" class="chat-box"></div>
-    <input type="text" id="user-input" placeholder="Type a message..." />
+    <div class="chat-header">
+      <img src="./icons8-message-bot-48.png" alt="Hospital Logo" class="logo">
+      <div class="header-text">
+        <h3>MedAssist</h3>
+        <p>Healthcare Virtual Assistant</p>
+      </div>
+    </div>
+    <div id="chat-box" class="chat-box">
+      <div class="message bot">
+        Hello! I'm your hospital virtual assistant. How can I help you today?
+      </div>
+    </div>
+    <div class="input-area">
+      <input type="text" id="user-input" placeholder="Ask about appointments, services, or information..." />
+      <button id="send-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
