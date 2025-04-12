@@ -1,81 +1,92 @@
 body {
     margin: 0;
-    font-family: "Segoe UI", sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Roboto', sans-serif; /* A clean and readable font */
+    background-color: #e0f7fa; /* Light cyan background - evokes a clinical feel */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-  }
-  
-  .chat-container {
-    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+.chat-container {
+    background-color: #fff;
     width: 450px;
+    max-width: 95%;
     height: 600px;
+    max-height: 95%;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-  }
-  
-  .chat-box {
+    border: 1px solid #b2ebf2; /* Slightly darker cyan border */
+}
+
+.chat-box {
     flex: 1;
     padding: 20px;
     overflow-y: auto;
-    background-color: #f9f9f9;
-  }
-  
-  .message {
+    background-color: #f0f8f9; /* Very light cyan for the chat area */
+    scroll-behavior: smooth;
+}
+
+.message {
     max-width: 80%;
     margin: 10px 0;
-    padding: 12px 16px;
-    border-radius: 18px;
+    padding: 12px 18px;
+    border-radius: 20px;
     line-height: 1.5;
     white-space: pre-wrap;
-    animation: fadeIn 0.3s ease;
-  }
-  
-  .user {
-    background-color: #0084ff;
-    color: white;
+    word-break: break-word;
+    animation: fadeIn 0.2s ease-out;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.user {
+    background-color: #4db6ac; /* Teal - associated with health and calmness */
+    color: #fff;
     align-self: flex-end;
-    border-bottom-right-radius: 2px;
-  }
-  
-  .bot {
-    background-color: #e5e5ea;
-    color: black;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 4px;
+}
+
+.bot {
+    background-color: #e0f2f1; /* Very light teal for bot messages */
+    color: #37474f; /* Dark grey-blue for readability */
     align-self: flex-start;
-    border-bottom-left-radius: 2px;
-  }
-  
-  .typing {
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 4px;
+}
+
+.typing {
     font-style: italic;
     font-size: 14px;
-    color: #888;
+    color: #78909c; /* Muted grey-blue */
     margin-left: 5px;
     animation: blink 1s infinite;
-  }
-  
-  input[type="text"] {
+}
+
+input[type="text"] {
     border: none;
     padding: 15px;
     font-size: 16px;
     width: 100%;
     outline: none;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #b2ebf2;
     box-sizing: border-box;
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(5px); }
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(3px); }
     to { opacity: 1; transform: translateY(0); }
-  }
-  
-  @keyframes blink {
+}
+
+@keyframes blink {
     0% { opacity: 0.3; }
     50% { opacity: 1; }
     100% { opacity: 0.3; }
-  }
-  
+}
