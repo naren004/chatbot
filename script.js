@@ -82,3 +82,14 @@ async function getGeminiReply(userText) {
     throw error;
   }
 }
+document.getElementById("refresh-btn").addEventListener("click", function () {
+    const chatBox = document.getElementById("chat-box");
+    chatBox.innerHTML = '';
+  
+    // Optional: Add a new welcome message after refresh
+    const welcomeMsg = document.createElement("div");
+    welcomeMsg.className = "message bot";
+    welcomeMsg.textContent = "Hello! I'm your virtual assistant. How can I help you today?";
+    chatBox.appendChild(welcomeMsg);
+  });
+  

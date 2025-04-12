@@ -144,3 +144,18 @@
   .message.user {
     border-right: 3px solid #0d47a1;
   }
+  #refresh-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #refresh-btn:hover {
+    background-color: #f0f0f0; /* Optional: subtle hover effect */
+    border-radius: 5px;
+  }
+  
